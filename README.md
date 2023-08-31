@@ -2,6 +2,11 @@
 
 Bu repo'da dvdrental adlı hazır bir veritabanı kullanılmıştır. dvdrental adlı veritabanından film tablosu çekilmiştir. Sorgular ona aittir
 
+Kullanılabilecek kaynaklar:
+
+[W3Schools](https://www.w3schools.com/sql/sql_select.asp) & [PostgreSQL Tutorial](https://www.postgresqltutorial.com/)
+
+
 # SQL Ödev 1:
 
 - film tablosunda bulunan title ve description sütunlarındaki verileri sıralayınız.
