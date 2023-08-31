@@ -140,12 +140,40 @@ ORDER BY length ASC
 OFFSET 5
 LIMIT 5;
 ```
--customer tablosunda bulunan last_name sütununa göre azalan yapılan sıralamada store_id 1 olmak koşuluyla ilk 4 veriyi sıralayınız.
+- customer tablosunda bulunan last_name sütununa göre azalan yapılan sıralamada store_id 1 olmak koşuluyla ilk 4 veriyi sıralayınız.
 ```
 SELECT * FROM customer
 WHERE store_id = 1
 ORDER BY last_name DESC
 LIMIT 4;
+```
+# SQL Ödev 6:
+- film tablosunda bulunan rental_rate sütunundaki değerlerin ortalaması nedir?
+```
+SELECT ROUND(AVG(rental_rate), 3) from film;
+
+Çıktı: 2.980
+```
+- film tablosunda bulunan filmlerden kaç tanesi 'C' karakteri ile başlar?
+```
+SELECT COUNT(*) FROM film
+WHERE title LIKE 'C%';
+
+Çıktı: 92
+```
+- film tablosunda bulunan filmlerden rental_rate değeri 0.99 a eşit olan en uzun (length) film kaç dakikadır?
+```
+SELECT MAX(length) FROM film
+WHERE rental_rate = 0.99;
+
+Çıktı: 184
+```
+- film tablosunda bulunan filmlerin uzunluğu 150 dakikadan büyük olanlarına ait kaç farklı replacement_cost değeri vardır?
+```
+SELECT COUNT(DISTINCT replacement_cost) FROM film
+WHERE length > 150;
+
+Çıktı: 21
 ```
 
 
