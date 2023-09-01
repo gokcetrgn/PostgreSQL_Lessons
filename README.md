@@ -304,5 +304,18 @@ WHERE id = 49;
 - Sütunların her birine göre ilgili satırı silecek 5 adet DELETE işlemi yapalım.
 ```
 DELETE FROM employee
-WHERE id > 45;
+WHERE name = 'Malik';
+
+DELETE FROM employee
+WHERE id = 44;
+
+DELETE FROM employee
+WHERE email = 'ldemars16@deviantart.com';
+
+DELETE FROM employee
+WHERE birthday = '1940-08-21';
+
+DELETE FROM employee
+WHERE id > 45
+RETURNING *;
 ```
